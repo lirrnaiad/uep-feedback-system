@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Custom Font Classes */
+.font-times {
+    font-family: 'Times New Roman', serif;
+}
+
+.font-cedarville {
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+/* Custom Colors from Figma Design */
+.bg-uep-blue {
+    background-color: #364388;
+}
+
+.bg-uep-yellow {
+    background-color: #ffff88;
+}
+
+.bg-form-gray {
+    background-color: #e9e8e8;
+}
+
+.border-input-gray {
+    border-color: #686868;
+}
+
+.text-input-gray {
+    color: #9c9c9c;
+}
+
+/* Custom Radio Button Styling */
+input[type="radio"]:checked + div,
+input[type="radio"]:checked ~ div {
+    background-color: #364388;
+    border-color: #364388;
+    color: white;
+}
+
+/* Shadow Effects */
+.shadow-inner {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Radio style for inline radios */
+.radio-uep {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #686868;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 2px; /* align with first line of wrapped labels */
+    flex-shrink: 0;
+}
+
+.radio-uep:checked {
+    border-color: #364388;
+    background-color: #364388;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.radio-uep:focus-visible {
+    outline: 2px solid #364388;
+    outline-offset: 2px;
+}
+
+.radio-row input:hover {
+    box-shadow: 0 0 0 2px rgba(54, 67, 136, 0.25);
+}
+
+/* Make only the radio itself clickable (not the label text) */
+.radio-row {
+    pointer-events: none;
+}
+.radio-row input {
+    pointer-events: auto;
+}
+
+/* SQD option hover/select */
+.sqd-option {
+    pointer-events: auto;
+}
+.sqd-option .sqd-circle {
+    pointer-events: none;
+}
+.sqd-option:hover .sqd-circle {
+    box-shadow: 0 0 0 3px rgba(54, 67, 136, 0.2);
+}
