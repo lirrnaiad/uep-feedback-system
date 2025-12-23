@@ -17,9 +17,7 @@ class Question extends Model
         'is_active' => 'boolean',
     ];
 
-    /**
-     * Get the responses for the question.
-     */
+    // Get responses for this question
     public function responses(): HasMany
     {
         return $this->hasMany(Response::class);

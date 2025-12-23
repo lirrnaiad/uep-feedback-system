@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
 {
-    /**
-     * Show the feedback form.
-     */
+    // Show feedback form
     public function create()
     {
         $questions = Question::where('is_active', true)->orderBy('code')->get();
@@ -19,12 +17,10 @@ class FeedbackController extends Controller
         return view('feedback.create', compact('questions'));
     }
 
-    /**
-     * Store the feedback entry and responses.
-     */
+    // Save feedback to database
     public function store(Request $request)
     {
-        // Validate the feedback entry data
+        // Validate form data
         $validated = $request->validate([
             'unit_office' => 'required|string|max:255',
             'transaction_date' => 'required|date',

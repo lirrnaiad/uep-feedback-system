@@ -33,9 +33,7 @@ class FeedbackEntry extends Model
         'age' => 'integer',
     ];
 
-    /**
-     * Get the responses for the feedback entry.
-     */
+    // Get responses for this entry
     public function responses(): HasMany
     {
         return $this->hasMany(Response::class);

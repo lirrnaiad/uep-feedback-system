@@ -17,17 +17,13 @@ class Response extends Model
         'score' => 'integer',
     ];
 
-    /**
-     * Get the feedback entry that owns the response.
-     */
+    // Get the feedback entry
     public function feedbackEntry(): BelongsTo
     {
         return $this->belongsTo(FeedbackEntry::class);
     }
 
-    /**
-     * Get the question that owns the response.
-     */
+    // Get the question
     public function question(): BelongsTo
     {
         return $this->belongsTo(Question::class);
