@@ -97,7 +97,11 @@ php artisan serve    # Terminal 2 - backend
 
 ## Team
 
-[Add team member names here]
+- Pinca, Paolo Leandro L.
+- Fabia, Sean Ivan M.
+- Ordonia, Marl June S.
+- Balat, Khristher John B.
+- Quitorio, Adielyn P.
 
 ## License
 
